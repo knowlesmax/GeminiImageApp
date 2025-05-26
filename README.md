@@ -205,12 +205,9 @@ gemini-image-app/
 ├── 📁 storage/               # 📦 文件存储
 │   ├── 📁 uploads/           # 用户上传
 │   ├── 📁 generated/         # AI 生成
-│   └── 📁 models/            # AI 模型
-│       ├── 📄 yolo11n.pt     # YOLO Nano
-│       ├── 📄 yolo11s.pt     # YOLO Small
-│       ├── 📄 yolo11m.pt     # YOLO Medium
-│       ├── 📄 yolo11l.pt     # YOLO Large
-│       └── 📄 *.pt           # 其他模型
+│   └── 📁 models/            # AI 模型 (自动下载)
+│       ├── 📄 README.md      # 模型说明
+│       └── 📄 *.pt           # YOLO 模型 (首次使用时下载)
 ├── 📄 .env.example           # 环境变量模板
 ├── 📄 .gitignore            # Git 忽略规则
 ├── 📄 README.md             # 项目说明
