@@ -36,13 +36,46 @@
 }
 
 .theme-dark body {
-    background-color: var(--color-background) !important;
-    color: var(--color-text) !important;
+    background-color: #111827 !important;
+    color: #FFFFFF !important;
 }
 
-.theme-dark .bg-white {
-    background-color: var(--color-surface) !important;
-    color: var(--color-text) !important;
+/* 深色主题根元素背景 */
+.theme-dark {
+    background-color: #111827 !important;
+}
+
+.theme-dark .bg-white,
+.theme-dark .bg-gray-50,
+.theme-dark .bg-gray-100,
+.theme-dark .bg-gray-200 {
+    background-color: #1F2937 !important;
+    color: #FFFFFF !important;
+}
+
+.theme-dark .bg-gray-800,
+.theme-dark .bg-gray-900 {
+    background-color: #111827 !important;
+    color: #FFFFFF !important;
+}
+
+/* 深色主题下的页面容器背景 */
+.theme-dark .container,
+.theme-dark .main-content,
+.theme-dark .page-container,
+.theme-dark .content-wrapper {
+    background-color: #111827 !important;
+    color: #FFFFFF !important;
+}
+
+/* 深色主题下的卡片和面板背景 */
+.theme-dark .card,
+.theme-dark .panel,
+.theme-dark .modal,
+.theme-dark .dialog {
+    background-color: #1F2937 !important;
+    color: #FFFFFF !important;
+    border-color: #374151 !important;
 }
 
 .theme-dark .text-gray-900 {
@@ -64,14 +97,14 @@
 .theme-dark input,
 .theme-dark textarea,
 .theme-dark select {
-    background-color: var(--color-surface) !important;
-    border-color: var(--color-border) !important;
-    color: var(--color-text) !important;
+    background-color: #1F2937 !important;
+    border-color: #374151 !important;
+    color: #FFFFFF !important;
 }
 
 .theme-dark input::placeholder,
 .theme-dark textarea::placeholder {
-    color: var(--color-text-secondary) !important;
+    color: #9CA3AF !important;
 }
 
 /* 深色主题下的文字颜色 - 全面覆盖 */
@@ -96,10 +129,7 @@
     color: #FFFFFF !important;
 }
 
-/* 强制覆盖所有可能的文字颜色类 */
-.theme-dark * {
-    color: #FFFFFF !important;
-}
+/* 深色主题下的基础文字颜色 */
 
 /* 重新设置特殊颜色 */
 .theme-dark .text-blue-600,
@@ -338,6 +368,58 @@
 .theme-dark .status-text,
 .theme-dark .info-text {
     color: #E5E7EB !important;
+}
+
+/* 深色主题下的Vue应用根容器 */
+.theme-dark #app,
+.theme-dark .app,
+.theme-dark .router-view {
+    background-color: #111827 !important;
+    color: #FFFFFF !important;
+    min-height: 100vh !important;
+}
+
+/* 深色主题下的页面布局 */
+.theme-dark .min-h-screen {
+    background-color: #111827 !important;
+}
+
+.theme-dark .h-screen {
+    background-color: #111827 !important;
+}
+
+/* 深色主题下的flex容器 */
+.theme-dark .flex {
+    background-color: inherit !important;
+}
+
+/* 深色主题下的网格容器 */
+.theme-dark .grid {
+    background-color: inherit !important;
+}
+
+/* 深色主题下的导航栏 */
+.theme-dark nav {
+    background-color: #1F2937 !important;
+    border-color: #374151 !important;
+}
+
+.theme-dark .shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 深色主题下的主要内容区域 */
+.theme-dark main {
+    background-color: #111827 !important;
+}
+
+.theme-dark .bg-gray-50 {
+    background-color: #111827 !important;
+}
+
+/* 深色主题下的hover效果 */
+.theme-dark .hover\:bg-gray-50:hover {
+    background-color: #374151 !important;
 }
 
 /* 极简黑色主题 - 参考现代设计 */
