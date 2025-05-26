@@ -29,19 +29,20 @@
     --color-secondary: #9CA3AF;
     --color-background: #111827;
     --color-surface: #1F2937;
-    --color-text: #F9FAFB;
-    --color-text-secondary: #D1D5DB;
+    --color-text: #FFFFFF;
+    --color-text-secondary: #E5E7EB;
     --color-border: #374151;
     --color-accent: #34D399;
 }
 
 .theme-dark body {
-    background-color: var(--color-background);
-    color: var(--color-text);
+    background-color: var(--color-background) !important;
+    color: var(--color-text) !important;
 }
 
 .theme-dark .bg-white {
     background-color: var(--color-surface) !important;
+    color: var(--color-text) !important;
 }
 
 .theme-dark .text-gray-900 {
@@ -54,8 +55,289 @@
 }
 
 .theme-dark .border-gray-100,
-.theme-dark .border-gray-200 {
+.theme-dark .border-gray-200,
+.theme-dark .border-gray-300 {
     border-color: var(--color-border) !important;
+}
+
+/* 深色主题下的输入框样式 */
+.theme-dark input,
+.theme-dark textarea,
+.theme-dark select {
+    background-color: var(--color-surface) !important;
+    border-color: var(--color-border) !important;
+    color: var(--color-text) !important;
+}
+
+.theme-dark input::placeholder,
+.theme-dark textarea::placeholder {
+    color: var(--color-text-secondary) !important;
+}
+
+/* 深色主题下的文字颜色 - 全面覆盖 */
+.theme-dark .text-white {
+    color: #FFFFFF !important;
+}
+
+.theme-dark .text-black {
+    color: #FFFFFF !important;
+}
+
+.theme-dark .text-gray-50,
+.theme-dark .text-gray-100,
+.theme-dark .text-gray-200,
+.theme-dark .text-gray-300,
+.theme-dark .text-gray-400,
+.theme-dark .text-gray-500,
+.theme-dark .text-gray-600,
+.theme-dark .text-gray-700,
+.theme-dark .text-gray-800,
+.theme-dark .text-gray-900 {
+    color: #FFFFFF !important;
+}
+
+/* 强制覆盖所有可能的文字颜色类 */
+.theme-dark * {
+    color: #FFFFFF !important;
+}
+
+/* 重新设置特殊颜色 */
+.theme-dark .text-blue-600,
+.theme-dark .text-blue-700,
+.theme-dark .text-blue-500 {
+    color: #60A5FA !important;
+}
+
+.theme-dark .text-green-600,
+.theme-dark .text-green-700,
+.theme-dark .text-green-500 {
+    color: #34D399 !important;
+}
+
+.theme-dark .text-red-500,
+.theme-dark .text-red-600,
+.theme-dark .text-red-700 {
+    color: #F87171 !important;
+}
+
+.theme-dark .text-yellow-500,
+.theme-dark .text-yellow-600 {
+    color: #FBBF24 !important;
+}
+
+.theme-dark .text-purple-500,
+.theme-dark .text-purple-600 {
+    color: #A78BFA !important;
+}
+
+/* 重复代码已在上面定义，这里移除 */
+
+/* 深色主题下的按钮样式 */
+.theme-dark .bg-blue-600 {
+    background-color: var(--color-primary) !important;
+    color: #FFFFFF !important;
+}
+
+.theme-dark .bg-green-600 {
+    background-color: var(--color-accent) !important;
+    color: #FFFFFF !important;
+}
+
+.theme-dark .bg-purple-600 {
+    background-color: #8B5CF6 !important;
+    color: #FFFFFF !important;
+}
+
+.theme-dark .bg-red-600 {
+    background-color: #EF4444 !important;
+    color: #FFFFFF !important;
+}
+
+.theme-dark .bg-yellow-600 {
+    background-color: #F59E0B !important;
+    color: #FFFFFF !important;
+}
+
+/* 深色主题下的按钮文字强制白色 */
+.theme-dark button,
+.theme-dark .btn {
+    color: #FFFFFF !important;
+}
+
+/* 深色主题下的链接样式 */
+.theme-dark a {
+    color: var(--color-primary) !important;
+}
+
+.theme-dark a:hover {
+    color: var(--color-accent) !important;
+}
+
+/* 深色主题下的标题样式 */
+.theme-dark h1,
+.theme-dark h2,
+.theme-dark h3,
+.theme-dark h4,
+.theme-dark h5,
+.theme-dark h6 {
+    color: var(--color-text) !important;
+}
+
+/* 深色主题下的段落和文本 */
+.theme-dark p,
+.theme-dark span,
+.theme-dark div,
+.theme-dark label {
+    color: inherit !important;
+}
+
+/* 深色主题下的图标颜色 */
+.theme-dark .fas,
+.theme-dark .far,
+.theme-dark .fab,
+.theme-dark i {
+    color: inherit !important;
+}
+
+/* 深色主题下的Element Plus组件样式 */
+.theme-dark .el-message {
+    background-color: var(--color-surface) !important;
+    border-color: var(--color-border) !important;
+    color: var(--color-text) !important;
+}
+
+.theme-dark .el-message--success {
+    background-color: rgba(52, 211, 153, 0.1) !important;
+    border-color: var(--color-accent) !important;
+    color: var(--color-accent) !important;
+}
+
+.theme-dark .el-message--error {
+    background-color: rgba(239, 68, 68, 0.1) !important;
+    border-color: #EF4444 !important;
+    color: #EF4444 !important;
+}
+
+.theme-dark .el-message--warning {
+    background-color: rgba(245, 158, 11, 0.1) !important;
+    border-color: #F59E0B !important;
+    color: #F59E0B !important;
+}
+
+/* 深色主题下的表单元素 */
+.theme-dark .el-input__inner,
+.theme-dark .el-textarea__inner,
+.theme-dark .el-select .el-input__inner {
+    background-color: var(--color-surface) !important;
+    border-color: var(--color-border) !important;
+    color: var(--color-text) !important;
+}
+
+.theme-dark .el-button {
+    border-color: var(--color-border) !important;
+}
+
+.theme-dark .el-button--primary {
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+}
+
+/* 深色主题下的禁用状态文字 */
+.theme-dark .disabled,
+.theme-dark [disabled],
+.theme-dark .el-button:disabled {
+    color: var(--color-text-secondary) !important;
+    opacity: 0.6;
+}
+
+/* 深色主题下的hover状态 */
+.theme-dark .hover\:text-gray-700:hover {
+    color: var(--color-text-secondary) !important;
+}
+
+.theme-dark .hover\:text-blue-700:hover {
+    color: var(--color-accent) !important;
+}
+
+/* 深色主题下的focus状态 */
+.theme-dark input:focus,
+.theme-dark textarea:focus,
+.theme-dark select:focus {
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1) !important;
+}
+
+/* 深色主题下的选中状态 */
+.theme-dark .bg-purple-50 {
+    background-color: rgba(139, 92, 246, 0.1) !important;
+}
+
+.theme-dark .border-purple-500 {
+    border-color: #8B5CF6 !important;
+}
+
+.theme-dark .border-purple-300 {
+    border-color: rgba(139, 92, 246, 0.5) !important;
+}
+
+/* 深色主题下的开关组件 */
+.theme-dark .bg-gray-200 {
+    background-color: var(--color-border) !important;
+}
+
+/* 深色主题下的分割线 */
+.theme-dark .border-t {
+    border-color: var(--color-border) !important;
+}
+
+/* 深色主题下的小文字 */
+.theme-dark .text-sm {
+    color: #FFFFFF !important;
+}
+
+/* 深色主题下的强制文字颜色覆盖 - 确保所有文字都清晰可见 */
+.theme-dark p,
+.theme-dark span,
+.theme-dark div,
+.theme-dark label,
+.theme-dark li,
+.theme-dark td,
+.theme-dark th,
+.theme-dark .text-xs,
+.theme-dark .text-sm,
+.theme-dark .text-base,
+.theme-dark .text-lg,
+.theme-dark .text-xl,
+.theme-dark .text-2xl,
+.theme-dark .text-3xl,
+.theme-dark .text-4xl,
+.theme-dark .text-5xl,
+.theme-dark .text-6xl {
+    color: #FFFFFF !important;
+}
+
+/* 深色主题下的表单标签 */
+.theme-dark .form-label,
+.theme-dark .el-form-item__label {
+    color: #FFFFFF !important;
+}
+
+/* 深色主题下的卡片内容 */
+.theme-dark .card-content,
+.theme-dark .content {
+    color: #FFFFFF !important;
+}
+
+/* 深色主题下的导航文字 */
+.theme-dark .nav-item,
+.theme-dark .menu-item {
+    color: #FFFFFF !important;
+}
+
+/* 深色主题下的状态文字 */
+.theme-dark .status-text,
+.theme-dark .info-text {
+    color: #E5E7EB !important;
 }
 
 /* 极简黑色主题 - 参考现代设计 */
@@ -236,24 +518,7 @@
     background-color: var(--color-accent) !important;
 }
 
-/* 输入框主题样式 */
-.theme-dark input,
-.theme-dark textarea,
-.theme-dark select,
-.theme-artist input,
-.theme-artist textarea,
-.theme-artist select {
-    background-color: var(--color-surface) !important;
-    border-color: var(--color-border) !important;
-    color: var(--color-text) !important;
-}
-
-.theme-dark input::placeholder,
-.theme-dark textarea::placeholder,
-.theme-artist input::placeholder,
-.theme-artist textarea::placeholder {
-    color: var(--color-text-secondary) !important;
-}
+/* 输入框主题样式 - 已在上面定义，这里移除重复 */
 
 /* 卡片阴影效果 */
 .theme-dark .shadow-lg,

@@ -98,18 +98,46 @@ export default {
     const isDarkMode = ref(false)
     const mobileMenuOpen = ref(false)
 
+    // 应用主题的函数
+    const applyTheme = (themeName) => {
+      // 移除所有主题类
+      document.documentElement.classList.remove('theme-light', 'theme-dark')
+      document.body.classList.remove('theme-light', 'theme-dark')
+
+      // 添加新主题类
+      const themeClass = `theme-${themeName}`
+      document.documentElement.classList.add(themeClass)
+      document.body.classList.add(themeClass)
+
+      // 同时设置data-theme属性以备用
+      document.documentElement.setAttribute('data-theme', themeName)
+
+      // 更新isDarkMode状态
+      isDarkMode.value = themeName === 'dark'
+    }
+
     // 初始化主题
     onMounted(() => {
-      const savedTheme = localStorage.getItem('theme')
-      if (savedTheme) {
-        isDarkMode.value = savedTheme === 'dark'
+      // 从设置中读取主题
+      const savedSettings = localStorage.getItem('gemini-app-settings')
+      let themeName = 'light' // 默认主题
+
+      if (savedSettings) {
+        try {
+          const settings = JSON.parse(savedSettings)
+          themeName = settings.theme || 'light'
+        } catch (e) {
+          console.warn('解析设置失败，使用默认主题')
+        }
       } else {
-        // 检测系统主题偏好
-        isDarkMode.value = window.matchMedia('(prefers-color-scheme: dark)').matches
+        // 如果没有保存的设置，检测系统主题偏好
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          themeName = 'dark'
+        }
       }
 
       // 应用主题
-      document.documentElement.setAttribute('data-theme', isDarkMode.value ? 'dark' : 'light')
+      applyTheme(themeName)
     })
 
     return {

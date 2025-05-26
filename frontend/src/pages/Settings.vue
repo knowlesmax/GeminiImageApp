@@ -287,6 +287,17 @@ export default {
     // 设置主题
     const setTheme = (newTheme) => {
       theme.value = newTheme
+
+      // 移除所有主题类
+      document.documentElement.classList.remove('theme-light', 'theme-dark')
+      document.body.classList.remove('theme-light', 'theme-dark')
+
+      // 添加新主题类
+      const themeClass = `theme-${newTheme}`
+      document.documentElement.classList.add(themeClass)
+      document.body.classList.add(themeClass)
+
+      // 同时设置data-theme属性以备用
       document.documentElement.setAttribute('data-theme', newTheme)
     }
 
