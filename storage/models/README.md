@@ -19,14 +19,17 @@ This directory contains YOLO model files used for object detection and image seg
 
 ## Git Tracking
 
-By default, these model files are **tracked by Git**. If you want to exclude them from version control (recommended for large repositories), uncomment the relevant lines in `.gitignore`:
+These model files are **excluded from Git** to keep the repository size manageable. The `.gitignore` file contains:
 
 ```gitignore
-# Uncomment these lines to ignore model files:
-# *.pt
-# *.pth
-# *.onnx
+# AI model files are ignored
+*.pt
+*.pth
+*.onnx
+yolo*.pt
 ```
+
+This means model files will not be uploaded to your Git repository.
 
 ## Auto-Download
 

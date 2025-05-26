@@ -256,14 +256,24 @@ tmp/
 temp/
 
 # ===== AI Models & Data =====
-# Large AI model files (optional - uncomment if you don't want to track models)
-# *.pt
-# *.pth
-# *.onnx
-# *.pb
-# *.h5
-# *.pkl
-# *.joblib
+# Large AI model files - exclude from version control
+*.pt
+*.pth
+*.onnx
+*.pb
+*.h5
+*.pkl
+*.joblib
+
+# YOLO model files
+yolo*.pt
+yolo*.onnx
+yolo*.engine
+
+# Other AI model formats
+*.safetensors
+*.bin
+*.weights
 
 # Generated/uploaded files
 storage/uploads/*
