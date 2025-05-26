@@ -9,6 +9,7 @@
 [![Vue.js](https://img.shields.io/badge/Vue.js-3.0+-brightgreen.svg)](https://vuejs.org)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+![alt text](/img/home.png)
 ## ✨ 核心功能
 
 ### 🤖 智能图像问答
@@ -18,6 +19,7 @@
 - **模型选择**：支持多种 Gemini 模型切换
 
 ### 🎨 AI 图像生成
+![alt text](/img/imageGenerate.png)
 - **双引擎支持**：
   - **Imagen 3** - 照片级高质量图像生成
   - **Gemini 2.0 Flash** - 快速创意图像生成
@@ -26,21 +28,27 @@
 - **批量生成**：支持多张图像同时生成
 
 ### ✏️ 智能图像编辑
+![alt text](/img/imageEdit.png)
+![alt text](/img/imageEdit-2.png)
 - **AI 驱动编辑**：自然语言描述编辑需求
 - **多种编辑模式**：修复、增强、风格转换
 - **实时预览**：编辑结果即时显示
 - **历史记录**：编辑步骤可回溯
 
 ### 🎯 多算法目标检测
+![alt text](/img/imageDetect.png)
 - **三重检测引擎**：
   - **Gemini AI** - 智能语义检测
   - **OpenCV** - 传统计算机视觉
   - **YOLO v11** - 实时神经网络检测
 - **对比分析**：三种算法结果并排比较
+![alt text](/img/imageDetect-2.png)
 - **内容验证**：智能匹配用户查询与图像内容
 - **可视化结果**：边界框、置信度、汇总图像
 
 ### 🔍 精确图像分割
+![alt text](/img/imageSep.png)
+![alt text](/img/imageSep-2.png)
 - **像素级精度**：精确的对象轮廓分割
 - **多算法支持**：Gemini、OpenCV、YOLO 分割
 - **实例分割**：区分同类对象的不同实例
