@@ -186,15 +186,15 @@
         </div>
 
         <div class="flex space-x-4">
-          <a href="https://github.com" target="_blank" class="text-blue-600 hover:underline text-sm">
+          <a href="https://github.com/0xsline" target="_blank" class="text-blue-600 hover:underline text-sm">
             <i class="fab fa-github mr-1"></i>
             GitHub
           </a>
-          <a href="mailto:support@example.com" class="text-blue-600 hover:underline text-sm">
+          <a href="upunstop@example.com" class="text-blue-600 hover:underline text-sm">
             <i class="fas fa-envelope mr-1"></i>
             技术支持
           </a>
-          <a href="#" class="text-blue-600 hover:underline text-sm">
+          <a href="https://github.com/0xsline/GeminiImageApp" class="text-blue-600 hover:underline text-sm">
             <i class="fas fa-book mr-1"></i>
             使用文档
           </a>

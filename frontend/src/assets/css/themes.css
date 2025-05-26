@@ -131,6 +131,56 @@
 
 /* 深色主题下的基础文字颜色 */
 
+/* 深色主题下的特殊背景颜色 */
+.theme-dark .bg-yellow-50 {
+    background-color: rgba(251, 191, 36, 0.1) !important;
+}
+
+.theme-dark .bg-blue-50 {
+    background-color: rgba(59, 130, 246, 0.1) !important;
+}
+
+.theme-dark .bg-green-50 {
+    background-color: rgba(34, 197, 94, 0.1) !important;
+}
+
+.theme-dark .bg-red-50 {
+    background-color: rgba(239, 68, 68, 0.1) !important;
+}
+
+.theme-dark .bg-purple-50 {
+    background-color: rgba(168, 85, 247, 0.1) !important;
+}
+
+.theme-dark .bg-indigo-50 {
+    background-color: rgba(99, 102, 241, 0.1) !important;
+}
+
+/* 深色主题下的边框颜色 */
+.theme-dark .border-yellow-200 {
+    border-color: rgba(251, 191, 36, 0.3) !important;
+}
+
+.theme-dark .border-blue-200 {
+    border-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+.theme-dark .border-green-200 {
+    border-color: rgba(34, 197, 94, 0.3) !important;
+}
+
+.theme-dark .border-red-200 {
+    border-color: rgba(239, 68, 68, 0.3) !important;
+}
+
+.theme-dark .border-purple-200 {
+    border-color: rgba(168, 85, 247, 0.3) !important;
+}
+
+.theme-dark .border-indigo-200 {
+    border-color: rgba(99, 102, 241, 0.3) !important;
+}
+
 /* 重新设置特殊颜色 */
 .theme-dark .text-blue-600,
 .theme-dark .text-blue-700,
@@ -647,4 +697,84 @@ body {
 .theme-dark ::-webkit-scrollbar-thumb:hover,
 .theme-artist ::-webkit-scrollbar-thumb:hover {
     background: var(--color-secondary);
+}
+
+/* 深色主题下的文字颜色 - 黄色系 */
+.theme-dark .text-yellow-800 {
+    color: #FDE047 !important;
+}
+
+.theme-dark .text-blue-800 {
+    color: #93C5FD !important;
+}
+
+.theme-dark .text-green-800 {
+    color: #86EFAC !important;
+}
+
+.theme-dark .text-red-800 {
+    color: #FCA5A5 !important;
+}
+
+.theme-dark .text-purple-800 {
+    color: #C4B5FD !important;
+}
+
+.theme-dark .text-indigo-800 {
+    color: #A5B4FC !important;
+}
+
+/* 深色主题下的小背景色 */
+.theme-dark .bg-yellow-100 {
+    background-color: rgba(251, 191, 36, 0.2) !important;
+}
+
+.theme-dark .bg-blue-100 {
+    background-color: rgba(59, 130, 246, 0.2) !important;
+}
+
+.theme-dark .bg-green-100 {
+    background-color: rgba(34, 197, 94, 0.2) !important;
+}
+
+.theme-dark .bg-red-100 {
+    background-color: rgba(239, 68, 68, 0.2) !important;
+}
+
+.theme-dark .bg-purple-100 {
+    background-color: rgba(168, 85, 247, 0.2) !important;
+}
+
+.theme-dark .bg-indigo-100 {
+    background-color: rgba(99, 102, 241, 0.2) !important;
+}
+
+/* 深色主题下的渐变背景 */
+.theme-dark .bg-gradient-to-br {
+    background: linear-gradient(135deg, #111827 0%, #1F2937 50%, #374151 100%) !important;
+}
+
+/* 深色主题下的特殊文字颜色 */
+.theme-dark .text-yellow-200 {
+    color: #FEF3C7 !important;
+}
+
+.theme-dark .text-blue-200 {
+    color: #DBEAFE !important;
+}
+
+.theme-dark .text-green-200 {
+    color: #D1FAE5 !important;
+}
+
+.theme-dark .text-red-200 {
+    color: #FECACA !important;
+}
+
+.theme-dark .text-purple-200 {
+    color: #E9D5FF !important;
+}
+
+.theme-dark .text-indigo-200 {
+    color: #E0E7FF !important;
 }

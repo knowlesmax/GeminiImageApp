@@ -15,7 +15,7 @@
       <!-- 功能卡片网格 -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         <!-- 图像问答 -->
-        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer border"
              @click="navigateTo('/image-qa')">
           <div class="flex items-center mb-4">
             <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -31,7 +31,7 @@
         </div>
 
         <!-- 图像生成 -->
-        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer border"
              @click="navigateTo('/image-generation')">
           <div class="flex items-center mb-4">
             <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
@@ -47,7 +47,7 @@
         </div>
 
         <!-- 图像编辑 -->
-        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer border"
              @click="navigateTo('/image-editing')">
           <div class="flex items-center mb-4">
             <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
@@ -63,7 +63,7 @@
         </div>
 
         <!-- 目标检测 -->
-        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer border"
              @click="navigateTo('/object-detection')">
           <div class="flex items-center mb-4">
             <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
@@ -79,7 +79,7 @@
         </div>
 
         <!-- 图像分割 -->
-        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer border"
              @click="navigateTo('/image-segmentation')">
           <div class="flex items-center mb-4">
             <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
@@ -95,7 +95,7 @@
         </div>
 
         <!-- 视频生成 -->
-        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow cursor-pointer border"
              @click="navigateTo('/video-generation')">
           <div class="flex items-center mb-4">
             <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
@@ -112,7 +112,7 @@
       </div>
 
       <!-- 特性介绍 -->
-      <div class="bg-white rounded-xl p-8 shadow-lg">
+      <div class="bg-white rounded-xl p-8 shadow-lg border">
         <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">平台特性</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="text-center">

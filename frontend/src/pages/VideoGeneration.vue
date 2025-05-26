@@ -16,7 +16,7 @@
             <h2 class="text-lg font-semibold text-gray-900">视频描述</h2>
           </div>
 
-          <textarea v-model="prompt" 
+          <textarea v-model="prompt"
                     placeholder="请输入您想要生成的视频描述..."
                     class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-none"
                     rows="4"></textarea>
@@ -85,7 +85,7 @@
             </div>
           </div>
 
-          <button @click="generateVideo" 
+          <button @click="generateVideo"
                   :disabled="loading || !prompt.trim()"
                   class="w-full mt-6 bg-indigo-600 text-white py-3 px-6 rounded-lg hover:bg-indigo-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors">
             <i v-if="loading" class="fas fa-spinner fa-spin mr-2"></i>
@@ -102,14 +102,14 @@
             <i class="fas fa-clock text-xl text-orange-500 mr-3"></i>
             <h2 class="text-lg font-semibold text-gray-900">生成进度</h2>
           </div>
-          
+
           <div class="space-y-4">
             <div class="flex items-center justify-between">
               <span class="text-sm text-gray-600">{{ progressStatus }}</span>
               <span class="text-sm text-gray-600">{{ progressPercent }}%</span>
             </div>
             <div class="w-full bg-gray-200 rounded-full h-2">
-              <div class="bg-indigo-600 h-2 rounded-full transition-all duration-300" 
+              <div class="bg-indigo-600 h-2 rounded-full transition-all duration-300"
                    :style="{ width: progressPercent + '%' }"></div>
             </div>
             <p class="text-sm text-gray-600">预计剩余时间: {{ estimatedTime }}</p>
@@ -125,8 +125,8 @@
 
           <!-- 视频播放器 -->
           <div v-if="result.video_path" class="mb-4">
-            <video :src="getVideoUrl(result.video_path)" 
-                   controls 
+            <video :src="getVideoUrl(result.video_path)"
+                   controls
                    class="w-full rounded-lg shadow-md"
                    :poster="result.thumbnail_path ? getVideoUrl(result.thumbnail_path) : ''">
               您的浏览器不支持视频播放。
@@ -147,14 +147,14 @@
 
           <!-- 下载按钮 -->
           <div class="mt-4 flex space-x-2">
-            <a v-if="result.video_path" 
-               :href="getVideoUrl(result.video_path)" 
+            <a v-if="result.video_path"
+               :href="getVideoUrl(result.video_path)"
                download
                class="flex-1 bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors text-center">
               <i class="fas fa-download mr-2"></i>
               下载视频
             </a>
-            <button @click="shareVideo" 
+            <button @click="shareVideo"
                     class="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
               <i class="fas fa-share mr-2"></i>
               分享视频
@@ -163,34 +163,34 @@
         </div>
 
         <!-- 使用说明 -->
-        <div v-if="!result && !loading" class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+        <div v-if="!result && !loading" class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-100 dark:border-gray-700">
           <div class="flex items-center mb-4">
-            <i class="fas fa-info-circle text-xl text-blue-500 mr-3"></i>
-            <h2 class="text-lg font-semibold text-gray-900">使用说明</h2>
+            <i class="fas fa-info-circle text-xl text-blue-500 dark:text-blue-400 mr-3"></i>
+            <h2 class="text-lg font-semibold text-gray-900 dark:text-white">使用说明</h2>
           </div>
-          <div class="space-y-3 text-gray-600">
+          <div class="space-y-3 text-gray-600 dark:text-gray-300">
             <div class="flex items-start">
-              <span class="bg-indigo-100 text-indigo-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-medium mr-3 mt-0.5">1</span>
+              <span class="bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full w-6 h-6 flex items-center justify-center text-sm font-medium mr-3 mt-0.5">1</span>
               <p>输入详细的视频场景描述</p>
             </div>
             <div class="flex items-start">
-              <span class="bg-indigo-100 text-indigo-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-medium mr-3 mt-0.5">2</span>
+              <span class="bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full w-6 h-6 flex items-center justify-center text-sm font-medium mr-3 mt-0.5">2</span>
               <p>选择视频时长、质量和风格</p>
             </div>
             <div class="flex items-start">
-              <span class="bg-indigo-100 text-indigo-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-medium mr-3 mt-0.5">3</span>
+              <span class="bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full w-6 h-6 flex items-center justify-center text-sm font-medium mr-3 mt-0.5">3</span>
               <p>点击"生成视频"开始创作</p>
             </div>
             <div class="flex items-start">
-              <span class="bg-indigo-100 text-indigo-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-medium mr-3 mt-0.5">4</span>
+              <span class="bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full w-6 h-6 flex items-center justify-center text-sm font-medium mr-3 mt-0.5">4</span>
               <p>等待AI生成高质量视频</p>
             </div>
           </div>
 
-          <div class="mt-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+          <div class="mt-4 p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg">
             <div class="flex items-start">
-              <i class="fas fa-lightbulb text-yellow-600 mt-1 mr-3"></i>
-              <div class="text-yellow-800">
+              <i class="fas fa-lightbulb text-yellow-600 dark:text-yellow-400 mt-1 mr-3"></i>
+              <div class="text-yellow-800 dark:text-yellow-200">
                 <p class="font-medium mb-1">提示词建议：</p>
                 <p class="text-sm">描述具体的场景、动作、光线和氛围。包含摄像机运动、角度变化等细节可以获得更好的效果。</p>
               </div>
