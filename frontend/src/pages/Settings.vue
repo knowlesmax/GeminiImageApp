@@ -21,12 +21,12 @@
             <span class="text-red-500">*</span>
           </label>
           <div class="relative">
-            <input 
-              v-model="apiKey" 
+            <input
+              v-model="apiKey"
               :type="showApiKey ? 'text' : 'password'"
               placeholder="请输入您的Google AI API Key"
               class="w-full p-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-            <button 
+            <button
               @click="showApiKey = !showApiKey"
               class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700">
               <i :class="showApiKey ? 'fas fa-eye-slash' : 'fas fa-eye'"></i>
@@ -39,14 +39,14 @@
 
         <!-- API状态检测 -->
         <div class="flex items-center space-x-4">
-          <button 
-            @click="testApiKey" 
+          <button
+            @click="testApiKey"
             :disabled="!apiKey || testing"
             class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors">
             <i v-if="testing" class="fas fa-spinner fa-spin mr-2"></i>
             {{ testing ? '测试中...' : '测试连接' }}
           </button>
-          
+
           <div v-if="apiStatus" class="flex items-center">
             <i :class="apiStatus.success ? 'fas fa-check-circle text-green-500' : 'fas fa-times-circle text-red-500'" class="mr-2"></i>
             <span :class="apiStatus.success ? 'text-green-700' : 'text-red-700'">
@@ -56,8 +56,8 @@
         </div>
 
         <!-- 保存按钮 -->
-        <button 
-          @click="saveApiKey" 
+        <button
+          @click="saveApiKey"
           :disabled="!apiKey"
           class="w-full bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors">
           <i class="fas fa-save mr-2"></i>
@@ -78,7 +78,7 @@
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-3">界面主题</label>
           <div class="grid grid-cols-2 gap-4">
-            <button 
+            <button
               @click="setTheme('light')"
               :class="[
                 'p-4 border-2 rounded-lg transition-colors',
@@ -92,8 +92,8 @@
                 </div>
               </div>
             </button>
-            
-            <button 
+
+            <button
               @click="setTheme('dark')"
               :class="[
                 'p-4 border-2 rounded-lg transition-colors',
@@ -108,16 +108,6 @@
               </div>
             </button>
           </div>
-        </div>
-
-        <!-- 语言设置 -->
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-2">界面语言</label>
-          <select v-model="language" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
-            <option value="zh-CN">简体中文</option>
-            <option value="zh-TW">繁体中文</option>
-            <option value="en-US">English</option>
-          </select>
         </div>
 
         <!-- 默认模型设置 -->
@@ -136,13 +126,13 @@
             <h3 class="font-medium text-gray-900">自动保存结果</h3>
             <p class="text-sm text-gray-600">自动保存生成的图像和视频到本地</p>
           </div>
-          <button 
+          <button
             @click="autoSave = !autoSave"
             :class="[
               'relative inline-flex h-6 w-11 items-center rounded-full transition-colors',
               autoSave ? 'bg-purple-600' : 'bg-gray-200'
             ]">
-            <span 
+            <span
               :class="[
                 'inline-block h-4 w-4 transform rounded-full bg-white transition-transform',
                 autoSave ? 'translate-x-6' : 'translate-x-1'
@@ -152,8 +142,8 @@
         </div>
 
         <!-- 保存设置按钮 -->
-        <button 
-          @click="saveSettings" 
+        <button
+          @click="saveSettings"
           class="w-full bg-purple-600 text-white py-3 px-6 rounded-lg hover:bg-purple-700 transition-colors">
           <i class="fas fa-save mr-2"></i>
           保存设置
@@ -227,7 +217,6 @@ export default {
     const testing = ref(false)
     const apiStatus = ref(null)
     const theme = ref('light')
-    const language = ref('zh-CN')
     const defaultModel = ref('gemini-2.0-flash')
     const autoSave = ref(true)
 
@@ -238,7 +227,6 @@ export default {
         const settings = JSON.parse(savedSettings)
         apiKey.value = settings.apiKey || ''
         theme.value = settings.theme || 'light'
-        language.value = settings.language || 'zh-CN'
         defaultModel.value = settings.defaultModel || 'gemini-2.0-flash'
         autoSave.value = settings.autoSave !== false
       }
@@ -255,7 +243,7 @@ export default {
       apiStatus.value = null
 
       try {
-        const response = await api.post('/api/test-api-key', {
+        const response = await api.post('/test-api-key', {
           api_key: apiKey.value
         })
 
@@ -292,7 +280,7 @@ export default {
       const settings = JSON.parse(localStorage.getItem('gemini-app-settings') || '{}')
       settings.apiKey = apiKey.value
       localStorage.setItem('gemini-app-settings', JSON.stringify(settings))
-      
+
       ElMessage.success('API密钥已保存')
     }
 
@@ -307,14 +295,13 @@ export default {
       const settings = {
         apiKey: apiKey.value,
         theme: theme.value,
-        language: language.value,
         defaultModel: defaultModel.value,
         autoSave: autoSave.value
       }
-      
+
       localStorage.setItem('gemini-app-settings', JSON.stringify(settings))
       setTheme(theme.value)
-      
+
       ElMessage.success('设置已保存')
     }
 
@@ -329,7 +316,6 @@ export default {
       testing,
       apiStatus,
       theme,
-      language,
       defaultModel,
       autoSave,
       testApiKey,
