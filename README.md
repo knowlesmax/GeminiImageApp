@@ -520,6 +520,6 @@ lsof -i :3000
 [![GitHub stars](https://img.shields.io/github/stars/yourusername/gemini-image-app?style=social)](https://github.com/yourusername/gemini-image-app)
 [![GitHub forks](https://img.shields.io/github/forks/yourusername/gemini-image-app?style=social)](https://github.com/yourusername/gemini-image-app)
 
-[🏠 主页](https://github.com/yourusername/gemini-image-app) • [📖 文档](doc.md) • [🐛 报告问题](https://github.com/yourusername/gemini-image-app/issues) • [💡 功能请求](https://github.com/yourusername/gemini-image-app/issues)
+[🏠 主页](https://github.com/0xsline/GeminiImageApp) • [📖 文档](doc.md) • [🐛 报告问题](https://github.com/0xsline/GeminiImageApp/issues) • [💡 功能请求](https://github.com/0xsline/GeminiImageApp/issues)
 
 </div>
