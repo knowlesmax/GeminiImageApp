@@ -517,8 +517,8 @@ lsof -i :3000
 
 **🎨 Gemini Image App** - 让 AI 图像处理变得简单而强大
 
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/gemini-image-app?style=social)](https://github.com/yourusername/gemini-image-app)
-[![GitHub forks](https://img.shields.io/github/forks/yourusername/gemini-image-app?style=social)](https://github.com/yourusername/gemini-image-app)
+[![GitHub stars](https://img.shields.io/github/stars/0xsline/GeminiImageApp?style=social)](https://github.com/0xsline/GeminiImageApp)
+[![GitHub forks](https://img.shields.io/github/forks/0xsline/GeminiImageApp?style=social)](https://github.com/0xsline/GeminiImageApp)
 
 [🏠 主页](https://github.com/0xsline/GeminiImageApp) • [📖 文档](doc.md) • [🐛 报告问题](https://github.com/0xsline/GeminiImageApp/issues) • [💡 功能请求](https://github.com/0xsline/GeminiImageApp/issues)
 
